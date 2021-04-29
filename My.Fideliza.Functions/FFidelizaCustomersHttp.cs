@@ -29,12 +29,12 @@ namespace Demo.Fideliza.Functions
 
             if (id == 0)
             {
-                log.LogInformation("[REQ] Path simples.");
+                log.LogInformation("[FClientes] Listagem completa de clientes");
                 return _customerDomain.GetCustomers();
             }
             else 
             {
-                log.LogInformation("[REQ] Path composto - Customer Id: " + id);
+                log.LogInformation("[FClientes] Listagem individual de cliente");
                 Customer customer = _customerDomain.GetCustomer(id);
                 if (customer != null)
                     return new List<Customer>() { customer };                
